@@ -1,17 +1,28 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dunia Penanggal</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="icon" href="assets/icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dunia Penanggal - Peta Interaktif</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/icons/marker.png" />
 </head>
 <body>
+  <div id="loading">Memuat Dunia Penanggal...</div>
   <header>
     <h1>Peta Interaktif Dunia Penanggal</h1>
-    <p>Jelajahi semua tempat yang pernah Elara pijak.</p>
-    <a href="interactive-map.html" class="button">Buka Peta Interaktif</a>
   </header>
+  <main>
+    <iframe src="interactive-map.html" frameborder="0" id="map-frame"></iframe>
+  </main>
+  <footer>
+    <p>&copy; 2025 Dunia Penanggal oleh L. Audhara</p>
+  </footer>
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('loading').style.display = 'none';
+    });
+  </script>
 </body>
 </html>
